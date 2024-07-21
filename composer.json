@@ -1,0 +1,36 @@
+{
+    "name": "dotmarn/laravel-error-views",
+    "description": "A set of customised error pages/screens designed using the TailwindCSS for use in Laravel projects.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ridwan Kasim",
+            "email": "kasimsheyi20@gmail.com",
+            "role": "Owner"
+        }
+    ],
+    "homepage": "https://github.com/dotmarn/laravel-error-views",
+    "keywords": ["Laravel", "TailwindCSS", "Laravel Error Views", "Custom Error Screens", "TALL", "Laravel Framework"],
+    "require": {
+        "php": ">=7.4",
+        "laravel/framework": "^8.0|^9.0|^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dotman\\LaravelErrorViews\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dotman\\LaravelErrorViews\\LaravelErrorViewsServiceProvider"
+            ]
+        },
+        "branch-alias": {
+            "dev-main": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
