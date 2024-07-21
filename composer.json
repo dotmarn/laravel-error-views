@@ -1,5 +1,6 @@
 {
     "name": "dotmarn/laravel-error-views",
+    "version": "1.0.0",
     "description": "A set of customised error pages/screens designed using the TailwindCSS for use in Laravel projects.",
     "type": "project",
     "license": "MIT",
