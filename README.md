@@ -1,9 +1,9 @@
 # Laravel Custom Error Views
 
-[![Latest Stable Version](http://poser.pugx.org/dotmarn/laravel-error-views/v)](https://packagist.org/packages/dotmarn/laravel-error-views) 
-[![Total Downloads](http://poser.pugx.org/dotmarn/laravel-error-views/downloads)](https://packagist.org/packages/dotmarn/laravel-error-views)
-[![License](http://poser.pugx.org/dotmarn/laravel-error-views/license)](https://packagist.org/packages/dotmarn/laravel-error-views) 
-[![PHP Version Require](http://poser.pugx.org/dotmarn/laravel-error-views/require/php)](https://packagist.org/packages/dotmarn/laravel-error-views)
+[![Latest Stable Version](https://poser.pugx.org/dotmarn/laravel-error-views/v)](https://packagist.org/packages/dotmarn/laravel-error-views) 
+[![Total Downloads](https://poser.pugx.org/dotmarn/laravel-error-views/downloads)](https://packagist.org/packages/dotmarn/laravel-error-views)
+[![License](https://poser.pugx.org/dotmarn/laravel-error-views/license)](https://packagist.org/packages/dotmarn/laravel-error-views) 
+[![PHP Version Require](https://poser.pugx.org/dotmarn/laravel-error-views/require/php)](https://packagist.org/packages/dotmarn/laravel-error-views)
 [![Build Status](https://scrutinizer-ci.com/g/dotmarn/laravel-error-views/badges/build.png?b=main)](https://scrutinizer-ci.com/g/dotmarn/laravel-error-views/build-status/main)
 
 This is a laravel package that offers you customized and beautiful error screens designed with TailwindCSS.
