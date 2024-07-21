@@ -46,7 +46,6 @@ return [
             'message' => env('LARAVEL_ERROR_VIEWS_COLORS_MESSAGE', 'text-gray-500')
         ],
         'button' => [
-            'background' => env('LARAVEL_ERROR_VIEWS_COLORS_BUTTON_BACKGROUND', 'bg-purple-600'),
             'text' => env('LARAVEL_ERROR_VIEWS_COLORS_BUTTON_TEXT', 'text-purple-600')
         ]
     ],
