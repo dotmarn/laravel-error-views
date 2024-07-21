@@ -2,12 +2,15 @@
 
 This is a laravel package that offers you customized and beautiful error screens designed with TailwindCSS.
 
+### Screenshots
+![Screenshot](screenshot-404.png)
+
 ## Installation
 
 Begin by installing this package through Composer. Edit your project's `composer.json` file to require the package or simply run the following command:
 
 ```bash
-composer require dotman/laravel-error-views
+composer require dotmarn/laravel-error-views
 
 ```
 
