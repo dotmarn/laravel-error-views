@@ -28,6 +28,11 @@
             "Dotman\\LaravelErrorViews\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Dotman\\LaravelErrorViews\\Tests\\": "tests/"
+        }
+    },
     "config": {
         "sort-packages": true
     },
@@ -38,6 +43,11 @@
             ]
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "require-dev": {
+        "orchestra/testbench": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
 }

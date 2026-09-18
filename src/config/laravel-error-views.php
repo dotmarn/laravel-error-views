@@ -11,14 +11,14 @@ return [
     |
     */
     'title' => [
-        '401' => env('LARAVEL_ERROR_VIEWS_401_TITLE', 'Unauthorized'),
-        '403' => env('LARAVEL_ERROR_VIEWS_403_TITLE', 'Action or Page not authorized!!!'),
-        '404' => env('LARAVEL_ERROR_VIEWS_404_TITLE', 'Page Not Found!'),
-        '405' => env('LARAVEL_ERROR_VIEWS_405_TITLE', 'Method Not Allowed'),
-        '419' => env('LARAVEL_ERROR_VIEWS_419_TITLE', 'Page Expired'),
-        '429' => env('LARAVEL_ERROR_VIEWS_429_TITLE', 'Too Many Requests'),
-        '500' => env('LARAVEL_ERROR_VIEWS_500_TITLE', 'Whoops!!! Something went wrong.'),
-        '503' => env('LARAVEL_ERROR_VIEWS_503_TITLE', 'Whoops!!! Service is currently unavailable')
+        '401' => env('LARAVEL_ERROR_VIEWS_401_TITLE', 'laravel-error-views::errors.401.title'),
+        '403' => env('LARAVEL_ERROR_VIEWS_403_TITLE', 'laravel-error-views::errors.403.title'),
+        '404' => env('LARAVEL_ERROR_VIEWS_404_TITLE', 'laravel-error-views::errors.404.title'),
+        '405' => env('LARAVEL_ERROR_VIEWS_405_TITLE', 'laravel-error-views::errors.405.title'),
+        '419' => env('LARAVEL_ERROR_VIEWS_419_TITLE', 'laravel-error-views::errors.419.title'),
+        '429' => env('LARAVEL_ERROR_VIEWS_429_TITLE', 'laravel-error-views::errors.429.title'),
+        '500' => env('LARAVEL_ERROR_VIEWS_500_TITLE', 'laravel-error-views::errors.500.title'),
+        '503' => env('LARAVEL_ERROR_VIEWS_503_TITLE', 'laravel-error-views::errors.503.title'),
     ],
 
     /*
@@ -30,32 +30,47 @@ return [
     |
     */
     'message' => [
-        '401' => env('LARAVEL_ERROR_VIEWS_401_MESSAGE', 'Please sign in to access this page or resource.'),
-        '403' => env('LARAVEL_ERROR_VIEWS_403_MESSAGE', 'Sorry, You do not have access to this page or resource.'),
-        '404' => env('LARAVEL_ERROR_VIEWS_404_MESSAGE', 'It seems the page or resource you are looking for doesn\'t exist or has been moved.'),
-        '405' => env('LARAVEL_ERROR_VIEWS_405_MESSAGE', 'The requested method is not supported for this page or resource.'),
-        '419' => env('LARAVEL_ERROR_VIEWS_419_MESSAGE', 'Your session has expired. Please go back and try again.'),
-        '429' => env('LARAVEL_ERROR_VIEWS_429_MESSAGE', 'You have made too many requests. Please wait a moment and try again.'),
-        '500' => env('LARAVEL_ERROR_VIEWS_500_MESSAGE', 'Whoops!!! It\'s not you, it\'s us. Please try again.'),
-        '503' => env('LARAVEL_ERROR_VIEWS_503_MESSAGE', 'Sorry, we are doing some maintenance. Please try again in few minutes.')
+        '401' => env('LARAVEL_ERROR_VIEWS_401_MESSAGE', 'laravel-error-views::errors.401.message'),
+        '403' => env('LARAVEL_ERROR_VIEWS_403_MESSAGE', 'laravel-error-views::errors.403.message'),
+        '404' => env('LARAVEL_ERROR_VIEWS_404_MESSAGE', 'laravel-error-views::errors.404.message'),
+        '405' => env('LARAVEL_ERROR_VIEWS_405_MESSAGE', 'laravel-error-views::errors.405.message'),
+        '419' => env('LARAVEL_ERROR_VIEWS_419_MESSAGE', 'laravel-error-views::errors.419.message'),
+        '429' => env('LARAVEL_ERROR_VIEWS_429_MESSAGE', 'laravel-error-views::errors.429.message'),
+        '500' => env('LARAVEL_ERROR_VIEWS_500_MESSAGE', 'laravel-error-views::errors.500.message'),
+        '503' => env('LARAVEL_ERROR_VIEWS_503_MESSAGE', 'laravel-error-views::errors.503.message'),
+    ],
+
+    'theme' => [
+        'title_color' => env('LARAVEL_ERROR_VIEWS_TITLE_COLOR'),
+        'message_color' => env('LARAVEL_ERROR_VIEWS_MESSAGE_COLOR'),
+        'accent_color' => env('LARAVEL_ERROR_VIEWS_ACCENT_COLOR'),
+    ],
+
+    'navigation' => [
+        'show_home_link' => env('LARAVEL_ERROR_VIEWS_SHOW_HOME_LINK', true),
+        'home_url' => env('LARAVEL_ERROR_VIEWS_HOME_URL', '/'),
+        'home_label' => env('LARAVEL_ERROR_VIEWS_HOME_LABEL', 'laravel-error-views::errors.navigation.home'),
+        'show_back_link' => env('LARAVEL_ERROR_VIEWS_SHOW_BACK_LINK', true),
+        'back_label' => env('LARAVEL_ERROR_VIEWS_BACK_LABEL', 'laravel-error-views::errors.navigation.back'),
     ],
 
     /*
     |--------------------------------------------------------------------------
-    | Customizing the colors for both the title, message and, back button
+    | Legacy Tailwind color classes
     |--------------------------------------------------------------------------
     |
-    | Here you may specify the text colors for both the title & message
+    | These default values remain supported for existing installations. Use
+    | the theme color options above for new installations.
     |
     */
     'colors' => [
         'text' => [
             'title' => env('LARAVEL_ERROR_VIEWS_COLORS_TITLE', 'text-gray-700'),
-            'message' => env('LARAVEL_ERROR_VIEWS_COLORS_MESSAGE', 'text-gray-500')
+            'message' => env('LARAVEL_ERROR_VIEWS_COLORS_MESSAGE', 'text-gray-500'),
         ],
         'button' => [
-            'text' => env('LARAVEL_ERROR_VIEWS_COLORS_BUTTON_TEXT', 'text-purple-600')
-        ]
+            'text' => env('LARAVEL_ERROR_VIEWS_COLORS_BUTTON_TEXT', 'text-purple-600'),
+        ],
     ],
 
 ];

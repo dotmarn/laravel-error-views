@@ -1,0 +1,85 @@
+:root {
+    color-scheme: light;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    background: #fff;
+}
+
+.laravel-error-views-page {
+    display: grid;
+    min-height: 100vh;
+    padding: 1.5rem;
+    place-items: center;
+}
+
+.laravel-error-views-content {
+    width: min(100%, 49.375rem);
+    text-align: center;
+}
+
+.laravel-error-views-content > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 49.375rem;
+    margin: 0 auto 1rem;
+}
+
+.laravel-error-views-copy {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.laravel-error-views-title {
+    margin: 0;
+    color: var(--laravel-error-views-title-color, #374151);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.laravel-error-views-message {
+    max-width: 42rem;
+    margin: 0 auto;
+    color: var(--laravel-error-views-message-color, #6b7280);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.laravel-error-views-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.laravel-error-views-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--laravel-error-views-accent-color, #9333ea);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.laravel-error-views-link:hover {
+    text-decoration: underline;
+}
+
+.laravel-error-views-link:focus-visible {
+    outline: 3px solid var(--laravel-error-views-accent-color, #9333ea);
+    outline-offset: 4px;
+}
+
+.laravel-error-views-link svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}

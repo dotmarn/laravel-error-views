@@ -6,7 +6,7 @@
 [![PHP Version Require](https://poser.pugx.org/dotmarn/laravel-error-views/require/php)](https://packagist.org/packages/dotmarn/laravel-error-views)
 [![Build Status](https://scrutinizer-ci.com/g/dotmarn/laravel-error-views/badges/build.png?b=main)](https://scrutinizer-ci.com/g/dotmarn/laravel-error-views/build-status/main)
 
-This is a laravel package that offers you customized and beautiful error screens designed with TailwindCSS. It includes views for HTTP 401, 403, 404, 405, 419, 429, 500, and 503 responses.
+This Laravel package provides self-contained, accessible error screens for HTTP 401, 403, 404, 405, 419, 429, 500, and 503 responses. It does not depend on a CDN, so the page remains readable when third-party assets are unavailable or blocked by a content-security policy.
 
 ### Screenshots
 ![Screenshot](screenshot-404.png)
@@ -20,13 +20,16 @@ composer require dotmarn/laravel-error-views
 
 ```
 
-### Publishing the views
+### Publishing the views and assets
 
-This command will publish all the necessary assets to your project's `public/` and `resources/views/` directory.
+Publish the error views, then the local CSS and SVG artwork:
 
 ```bash
-php artisan vendor:publish --tag=laravel-error-views:assets
+php artisan vendor:publish --tag=laravel-error-views:views
+php artisan vendor:publish --tag=laravel-error-views:static-assets
 ```
+
+The legacy `laravel-error-views:assets` tag still publishes both sets for existing installations.
 
 ### Publishing the configuration
 
@@ -34,6 +37,14 @@ The command below will publish the configuration file `laravel-error-views.php` 
 
 ```bash
 php artisan vendor:publish --tag=laravel-error-views:config
+```
+
+### Publishing translations
+
+The package's English strings are translation keys by default. Publish them to customize wording or add locales:
+
+```bash
+php artisan vendor:publish --tag=laravel-error-views:lang
 ```
 
 ```php
@@ -50,14 +61,8 @@ return [
     |
     */
     'title' => [
-        '401' => env('LARAVEL_ERROR_VIEWS_401_TITLE', 'Unauthorized'),
-        '403' => env('LARAVEL_ERROR_VIEWS_403_TITLE', 'Action or Page not authorized!!!'),
-        '404' => env('LARAVEL_ERROR_VIEWS_404_TITLE', 'Page Not Found!'),
-        '405' => env('LARAVEL_ERROR_VIEWS_405_TITLE', 'Method Not Allowed'),
-        '419' => env('LARAVEL_ERROR_VIEWS_419_TITLE', 'Page Expired'),
-        '429' => env('LARAVEL_ERROR_VIEWS_429_TITLE', 'Too Many Requests'),
-        '500' => env('LARAVEL_ERROR_VIEWS_500_TITLE', 'Whoops!!! Something went wrong.'),
-        '503' => env('LARAVEL_ERROR_VIEWS_503_TITLE', 'Whoops!!! Service is currently unavailable')
+        '401' => env('LARAVEL_ERROR_VIEWS_401_TITLE', 'laravel-error-views::errors.401.title'),
+        // The remaining status codes follow the same pattern.
     ],
 
     /*
@@ -69,56 +74,55 @@ return [
     |
     */
     'message' => [
-        '401' => env('LARAVEL_ERROR_VIEWS_401_MESSAGE', 'Please sign in to access this page or resource.'),
-        '403' => env('LARAVEL_ERROR_VIEWS_403_MESSAGE', 'Sorry, You do not have access to this page or resource.'),
-        '404' => env('LARAVEL_ERROR_VIEWS_404_MESSAGE', 'It seems the page or resource you are looking for doesn\'t exist or has been moved.'),
-        '405' => env('LARAVEL_ERROR_VIEWS_405_MESSAGE', 'The requested method is not supported for this page or resource.'),
-        '419' => env('LARAVEL_ERROR_VIEWS_419_MESSAGE', 'Your session has expired. Please go back and try again.'),
-        '429' => env('LARAVEL_ERROR_VIEWS_429_MESSAGE', 'You have made too many requests. Please wait a moment and try again.'),
-        '500' => env('LARAVEL_ERROR_VIEWS_500_MESSAGE', 'Whoops!!! It\'s not you, it\'s us. Please try again.'),
-        '503' => env('LARAVEL_ERROR_VIEWS_503_MESSAGE', 'Sorry, we are doing some maintenance. Please try again in few minutes.')
+        '401' => env('LARAVEL_ERROR_VIEWS_401_MESSAGE', 'laravel-error-views::errors.401.message'),
+        // The remaining status codes follow the same pattern.
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Customizing the colors for both the title, message and, back button
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify the text colors for both the title & message
-    |
-    */
-    'colors' => [
-        'text' => [
-            'title' => env('LARAVEL_ERROR_VIEWS_COLORS_TITLE', 'text-gray-700'),
-            'message' => env('LARAVEL_ERROR_VIEWS_COLORS_MESSAGE', 'text-gray-500')
-        ],
-        'button' => [
-            'text' => env('LARAVEL_ERROR_VIEWS_COLORS_BUTTON_TEXT', 'text-purple-600')
-        ]
+    'theme' => [
+        'title_color' => env('LARAVEL_ERROR_VIEWS_TITLE_COLOR'),
+        'message_color' => env('LARAVEL_ERROR_VIEWS_MESSAGE_COLOR'),
+        'accent_color' => env('LARAVEL_ERROR_VIEWS_ACCENT_COLOR'),
     ],
 
+    'navigation' => [
+        'show_home_link' => env('LARAVEL_ERROR_VIEWS_SHOW_HOME_LINK', true),
+        'home_url' => env('LARAVEL_ERROR_VIEWS_HOME_URL', '/'),
+        'show_back_link' => env('LARAVEL_ERROR_VIEWS_SHOW_BACK_LINK', true),
+    ],
 ];
 ```
 
-### (Optional)
+### Customization
 
-If you will like to override the package's default titles and messages, you can edit the `.env` file and add the following:
+Override an individual title, message, color, or navigation setting through `.env`:
 
 ```bash
 LARAVEL_ERROR_VIEWS_404_TITLE="My Custom Title"
 LARAVEL_ERROR_VIEWS_404_MESSAGE="My Custom Message"
+LARAVEL_ERROR_VIEWS_ACCENT_COLOR="#2563EB"
+LARAVEL_ERROR_VIEWS_HOME_URL="/dashboard"
 ```
 
-### Contributing
+The back link is shown only when the referring URL is on the current host and is not the current page. The Home link is always available by default.
+
+## Development
+
+```bash
+composer test
+```
+
+The CI workflow verifies the lowest supported dependency set on PHP 8.0 and the current compatible dependency set on PHP 8.3.
+
+## Contributing
 
 Please feel free to fork this package and contribute by submitting a pull request to enhance the functionalities.
 
-### How can I thank you?
+## How can I thank you?
 
 Why not star the github repo? I'd love the attention! Why not share the link for this repository on Twitter.
 
 Don't forget to [follow me on twitter](https://twitter.com/oluwalosheyii)!
 
-### License
+## License
 
 The MIT License (MIT). Please see [License File](LICENSE) for more information.
