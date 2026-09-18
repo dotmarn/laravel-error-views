@@ -12,7 +12,9 @@ jobs:
       matrix:
         include:
           - php: '8.0'
-            dependencies: '--prefer-lowest'
+            # Composer blocks the EOL Laravel versions this compatibility check
+            # intentionally resolves. This only affects the disposable CI job.
+            dependencies: '--prefer-lowest --no-security-blocking'
           - php: '8.3'
             dependencies: ''
 
