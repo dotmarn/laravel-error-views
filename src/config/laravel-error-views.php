@@ -11,8 +11,12 @@ return [
     |
     */
     'title' => [
+        '401' => env('LARAVEL_ERROR_VIEWS_401_TITLE', 'Unauthorized'),
         '403' => env('LARAVEL_ERROR_VIEWS_403_TITLE', 'Action or Page not authorized!!!'),
         '404' => env('LARAVEL_ERROR_VIEWS_404_TITLE', 'Page Not Found!'),
+        '405' => env('LARAVEL_ERROR_VIEWS_405_TITLE', 'Method Not Allowed'),
+        '419' => env('LARAVEL_ERROR_VIEWS_419_TITLE', 'Page Expired'),
+        '429' => env('LARAVEL_ERROR_VIEWS_429_TITLE', 'Too Many Requests'),
         '500' => env('LARAVEL_ERROR_VIEWS_500_TITLE', 'Whoops!!! Something went wrong.'),
         '503' => env('LARAVEL_ERROR_VIEWS_503_TITLE', 'Whoops!!! Service is currently unavailable')
     ],
@@ -26,8 +30,12 @@ return [
     |
     */
     'message' => [
+        '401' => env('LARAVEL_ERROR_VIEWS_401_MESSAGE', 'Please sign in to access this page or resource.'),
         '403' => env('LARAVEL_ERROR_VIEWS_403_MESSAGE', 'Sorry, You do not have access to this page or resource.'),
         '404' => env('LARAVEL_ERROR_VIEWS_404_MESSAGE', 'It seems the page or resource you are looking for doesn\'t exist or has been moved.'),
+        '405' => env('LARAVEL_ERROR_VIEWS_405_MESSAGE', 'The requested method is not supported for this page or resource.'),
+        '419' => env('LARAVEL_ERROR_VIEWS_419_MESSAGE', 'Your session has expired. Please go back and try again.'),
+        '429' => env('LARAVEL_ERROR_VIEWS_429_MESSAGE', 'You have made too many requests. Please wait a moment and try again.'),
         '500' => env('LARAVEL_ERROR_VIEWS_500_MESSAGE', 'Whoops!!! It\'s not you, it\'s us. Please try again.'),
         '503' => env('LARAVEL_ERROR_VIEWS_503_MESSAGE', 'Sorry, we are doing some maintenance. Please try again in few minutes.')
     ],

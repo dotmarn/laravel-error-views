@@ -1,0 +1,11 @@
+<svg width="790" height="408" viewBox="0 0 790 408" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description">
+    <title id="title">401 Unauthorized</title>
+    <desc id="description">A lock marking an unauthorized page.</desc>
+    <path d="M340.346 2C426.908 2 497.737 69.359 503.278 154.52C521.969 140.676 545.104 132.488 570.151 132.488C624.635 132.488 670.069 171.23 680.411 222.667H696.284C746.937 222.667 788 263.731 788 314.384C788 365.038 746.937 406.102 696.284 406.102H117.97V405.755C53.121 400.951 2 346.815 2 280.738C2 211.502 58.127 155.374 127.364 155.374C145.022 155.374 161.827 159.025 177.066 165.613C177.066 75.103 250.169 2 340.346 2Z" fill="#F1F1F6"/>
+    <circle cx="395" cy="187" r="105" fill="#11133F"/>
+    <path d="M350 183V158C350 133.147 370.147 113 395 113C419.853 113 440 133.147 440 158V183" stroke="white" stroke-width="19" stroke-linecap="round"/>
+    <rect x="329" y="177" width="132" height="104" rx="16" fill="white"/>
+    <circle cx="395" cy="224" r="12" fill="#11133F"/>
+    <path d="M395 236V253" stroke="#11133F" stroke-width="12" stroke-linecap="round"/>
+    <text x="395" y="374" text-anchor="middle" fill="#11133F" font-family="Arial, sans-serif" font-size="76" font-weight="700" letter-spacing="8">401</text>
+</svg>

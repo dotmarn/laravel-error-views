@@ -1,0 +1,9 @@
+<svg width="790" height="408" viewBox="0 0 790 408" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description">
+    <title id="title">429 Too Many Requests</title>
+    <desc id="description">A clock marking a rate-limited request.</desc>
+    <path d="M340.346 2C426.908 2 497.737 69.359 503.278 154.52C521.969 140.676 545.104 132.488 570.151 132.488C624.635 132.488 670.069 171.23 680.411 222.667H696.284C746.937 222.667 788 263.731 788 314.384C788 365.038 746.937 406.102 696.284 406.102H117.97V405.755C53.121 400.951 2 346.815 2 280.738C2 211.502 58.127 155.374 127.364 155.374C145.022 155.374 161.827 159.025 177.066 165.613C177.066 75.103 250.169 2 340.346 2Z" fill="#F1F1F6"/>
+    <circle cx="395" cy="187" r="105" fill="#11133F"/>
+    <circle cx="395" cy="187" r="61" stroke="white" stroke-width="14"/>
+    <path d="M395 151V187L423 204M362 115L379 98M428 98L445 115" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="395" y="374" text-anchor="middle" fill="#11133F" font-family="Arial, sans-serif" font-size="76" font-weight="700" letter-spacing="8">429</text>
+</svg>
