@@ -51,7 +51,16 @@ class LaravelErrorViewsServiceProvider extends ServiceProvider
     protected function publishTranslations(): void
     {
         $this->publishes([
-            __DIR__ . '/lang' => lang_path('vendor/laravel-error-views'),
+            __DIR__ . '/lang' => $this->translationPublishPath(),
         ], 'laravel-error-views:lang');
+    }
+
+    protected function translationPublishPath(): string
+    {
+        if (function_exists('lang_path')) {
+            return lang_path('vendor/laravel-error-views');
+        }
+
+        return resource_path('lang/vendor/laravel-error-views');
     }
 }
