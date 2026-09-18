@@ -1,8 +1,9 @@
 <svg width="790" height="408" viewBox="0 0 790 408" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description">
     <title id="title">405 Method Not Allowed</title>
-    <desc id="description">Two opposing arrows marking an unsupported method.</desc>
+    <desc id="description">Two opposing route arrows marking an unsupported request method.</desc>
     <path d="M340.346 2C426.908 2 497.737 69.359 503.278 154.52C521.969 140.676 545.104 132.488 570.151 132.488C624.635 132.488 670.069 171.23 680.411 222.667H696.284C746.937 222.667 788 263.731 788 314.384C788 365.038 746.937 406.102 696.284 406.102H117.97V405.755C53.121 400.951 2 346.815 2 280.738C2 211.502 58.127 155.374 127.364 155.374C145.022 155.374 161.827 159.025 177.066 165.613C177.066 75.103 250.169 2 340.346 2Z" fill="#F1F1F6"/>
-    <circle cx="395" cy="187" r="105" fill="#11133F"/>
-    <path d="M326 155H448M448 155L419 126M448 155L419 184M464 218H342M342 218L371 189M342 218L371 247" stroke="white" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="395" y="374" text-anchor="middle" fill="#11133F" font-family="Arial, sans-serif" font-size="76" font-weight="700" letter-spacing="8">405</text>
+    <path d="M340.346 2C426.908 2 497.737 69.359 503.278 154.52C521.969 140.676 545.104 132.488 570.151 132.488C624.635 132.488 670.069 171.23 680.411 222.667H696.284C746.937 222.667 788 263.731 788 314.384C788 365.038 746.937 406.102 696.284 406.102H117.97V405.755C53.121 400.951 2 346.815 2 280.738C2 211.502 58.127 155.374 127.364 155.374C145.022 155.374 161.827 159.025 177.066 165.613C177.066 75.103 250.169 2 340.346 2Z" stroke="white" stroke-width="3"/>
+    <text x="395" y="389" text-anchor="middle" fill="#11133F" font-family="Arial, Helvetica, sans-serif" font-size="188" font-weight="700" letter-spacing="-10">405</text>
+    <path d="M323 153H459M459 153L425 119M459 153L425 187M467 239H331M331 239L365 205M331 239L365 273" stroke="white" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M395 153V239" stroke="white" stroke-width="20" stroke-linecap="round"/>
 </svg>
